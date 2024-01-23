@@ -1,0 +1,11 @@
+:root {
+  --black: #000;
+  --white: #fff;
+}
+
+h1 {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 50px 0;
+}

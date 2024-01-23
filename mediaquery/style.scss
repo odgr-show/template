@@ -1,0 +1,28 @@
+@use "./globals/" as *; //index.scssでforwardで読み込んだ場合、globalsフォルダを読み込めば、全てのファイルを使用することができる
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: min(90%, 900px);
+  height: 500px;
+  background: #0bd;
+  margin: 0 auto;
+
+  & h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  // 画面サイズが960px以上で適応される
+  @include mq("lg") {
+    background: teal;
+    color: #fff;
+  }
+}
